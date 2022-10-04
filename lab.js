@@ -140,7 +140,6 @@ function greeting( obj ) {
   // Do not edit the code above.
 }
 
-console.log(greeting(obj))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -156,7 +155,7 @@ console.log(greeting(obj))
 //Code Here
 
 function totalPopulation (obj) {
-  let {utah, california, texas, arizona} = obj
+ let {utah, california, texas, arizona} = obj
   return utah + california + texas + arizona
 }
 
@@ -171,6 +170,13 @@ function totalPopulation (obj) {
 */
 
 //Code Here
+
+function ingredients (obj) {
+  let {carb, fat, protein} = obj
+  let arr = []
+  arr.push(carb, fat, protein)
+  return arr
+}
 
 
 
@@ -194,6 +200,9 @@ var user = {
 
 //Code Here
 
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmounta.in"
+
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -202,6 +211,8 @@ var user = {
 
 //Code Here
 
+delete user.age
+//console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -212,7 +223,17 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor (name, age, color) {
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
 
+let jerry = new Cat ('Jerry', 7, 'Black')
+
+//console.log(jerry.name)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -223,6 +244,21 @@ var user = {
 */
 
 //Code here
+
+class Wizard {
+  constructor (name, age, favoriteSpell) {
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+  castSpell () {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
+
+let severus = new Wizard ('Severus', 34, 'Crucio!')
+
+severus.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -249,6 +285,24 @@ var user = {
 
 //Code Here
 
+class Phone {
+  constructor (brand, model, storage, color, price){
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.price = price
+    this.sold = false
+  }
+  sell (){
+    this.sold = true
+    console.log(`${this.brand} ${this.model} has been sold`)
+  }
+  changePrice (newPrice){
+    this.price = newPrice
+  }
+}
+
   
 /*
     Next make three new phone instances using your class.
@@ -262,6 +316,10 @@ var user = {
 
 //Code Here
 
+let phone1 = new Phone ('samsung', 'galaxy', 122, 'space grey', 900)
+let phone2 = new Phone ('apple', 'iphone', 144, 'white', 1000)
+let phone3 = new Phone ('google', 'pixel', 200, 'black', 700)
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -271,6 +329,10 @@ var user = {
 
 //Code Here 
 
+phone1.changePrice(800)
+
+console.log(phone1)
+
 
 /*
   Now call the sell method on one of your other phone objects
@@ -279,6 +341,11 @@ var user = {
 */
 
 //Code Here 
+
+
+phone3.sell()
+
+console.log(phone3.sold)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
