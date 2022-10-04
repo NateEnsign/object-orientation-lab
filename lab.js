@@ -24,6 +24,13 @@ console.log(me)
 
 //Code here
 
+let dog = {
+  name: 'Jim',
+  color: 'Brown',
+  age: 17,
+  goodBoy: true,
+}
+
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
@@ -31,12 +38,16 @@ console.log(me)
 
 //Code here
 
+//console.log(dog.name)
+
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
+
+//console.log(dog['color'])
 
 
 
@@ -48,12 +59,26 @@ console.log(me)
 
 //Code here
 
+let favoriteThings = {
+  band: 'Killers',
+  food: 'Mac & Cheese',
+  person: 'Ben of Course',
+  book: 'Crime & Punishment',
+  movie: 'Hacksaw Ridge',
+  holiday: '4th of July'
+}
+
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+
+favoriteThings.car = 'Outback',
+favoriteThings.show = "Seinfeld"
+
+//console.log(favoriteThings)
 
 
 /*
@@ -62,6 +87,13 @@ console.log(me)
 */
 
 //Code here
+
+
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
+
+//console.log(favoriteThings)
+
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -81,6 +113,13 @@ var carDetails = {
 
 //Code Here
 
+let {color} = carDetails
+let {make} = carDetails
+let {model} = carDetails
+let {year} = carDetails
+
+//console.log(color)
+
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -94,11 +133,14 @@ var carDetails = {
 function greeting( obj ) {
   //Code Here
   
+  let {firstName, lastName, title} = obj
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
+console.log(greeting(obj))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -113,7 +155,10 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function totalPopulation (obj) {
+  let {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona
+}
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
